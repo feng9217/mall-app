@@ -1,6 +1,5 @@
-// 开发及生产配置
 'use strict'
-// Template version: 1.2.5
+// Template version: 1.2.7
 // see http://vuejs-templates.github.io/webpack for documentation.
 
 const path = require('path')
@@ -56,7 +55,6 @@ module.exports = {
     // Paths
     assetsRoot: path.resolve(__dirname, '../dist'),
     assetsSubDirectory: 'static',
-    // 生产包 可以加上CDN地址 如 baidu.com
     assetsPublicPath: '/',
 
     /**

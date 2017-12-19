@@ -1,7 +1,5 @@
 'use strict'
-// 设置控制台输出颜色
 const chalk = require('chalk')
-// 版本检查工具(valid校验 clean清除左右空格)
 const semver = require('semver')
 const packageConfig = require('../package.json')
 const shell = require('shelljs')

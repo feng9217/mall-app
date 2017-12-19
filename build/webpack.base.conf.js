@@ -21,11 +21,9 @@ const createLintingRule = () => ({
 
 module.exports = {
   context: path.resolve(__dirname, '../'),
-  // 入口文件
   entry: {
     app: './src/main.js'
   },
-  // 输出文件 [name]保持文件名
   output: {
     path: config.build.assetsRoot,
     filename: '[name].js',
@@ -45,20 +43,16 @@ module.exports = {
       ...(config.dev.useEslint ? [createLintingRule()] : []),
       {
         test: /\.vue$/,
-        // .vue文件解析插件
         loader: 'vue-loader',
         options: vueLoaderConfig
       },
       {
         test: /\.js$/,
-        // ES6解析插件
         loader: 'babel-loader',
         include: [resolve('src'), resolve('test')]
       },
       {
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
-        // 将图片转换成base64编码 以文本形式插入html中
-        // 若以图片格式加载 则需要请求 十分耗性能
         loader: 'url-loader',
         options: {
           limit: 10000,
